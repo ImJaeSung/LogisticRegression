@@ -14,7 +14,7 @@ def sigmoid(self, z):
 
 $$C(\mathbf{y}, \mathbf{\hat{y}}) = \frac{1}{m}\sum_{i=1}^{m}L(y_{i}, \hat{y}_{i})$$
 
-- $\mathbf{{x}_{i}} = (x_{i, 1},x_{i, 2}, \cdots, x_{i, n})$
+- $\mathbf{x_{i}} = (x_{i, 1}, x_{i, 2}, \cdots, x_{i, n})$
 
 - $\mathbf{w} = (w_{1},w_{2}, \cdots, w_{n})$ : weight parameters
 
@@ -35,6 +35,7 @@ x_{3,1} & x_{3,2} & \cdots & x_{3,n} \\
 \vdots & \vdots & \ddots & \vdots\\
 x_{m,1} & x_{m,2} & \cdots & x_{m,n} \\
 \end{bmatrix}$$ 
+
 - $$\mathbf{y} = \begin{bmatrix}
 y_{1}\\ 
 y_{2} \\
