@@ -22,7 +22,7 @@ $$C(\mathbf{y}, \mathbf{\hat{y}}) = \frac{1}{m}\sum_{i=1}^{m}L(y_{i}, \hat{y}_{i
 
 $$\hat{y} = g(\mathbf{x}\mathbf{w}+b) = \frac{1}{1+e^-(\mathbf{x}\mathbf{w}+b)}$$
 
-$$ \begin{aligned} $$J(\mathbf{w}, b) \overset{\underset{\mathrm{def}}{}}{=}C(\mathbf{y}, \mathbf{\hat{y}}|\mathbf{X}, \mathbf{w}, b)$$ \\
+$$ \begin{aligned} J(\mathbf{w}, b) \overset{\underset{\mathrm{def}}{}}{&=}C(\mathbf{y}, \mathbf{\hat{y}}|\mathbf{X}, \mathbf{w}, b) \\
 &=\frac{1}{m}\sum_{i=1}^{m}L(y_{i},\frac{1}{1+e^{-(\mathbf{x_{i}}\mathbf{w}+b)}})\\
 &=\frac{1}{m}\sum_{i=1}^{m}[-y_{i}log(\frac{1}{1+e^{-(\mathbf{x_{i}}\mathbf{w}+b)}})-(1-y_{i})log(1-\frac{1}{1+e^{-(\mathbf{x_{i}}\mathbf{w}+b)}})]\end{aligned}$$
 
