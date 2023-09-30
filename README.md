@@ -1,5 +1,6 @@
 #### Logistic function(sigmoid function)
-$$g:\mathbb{R} \mapsto \mathbb{R} g(x) = \frac{1}{1+e^{-x}}$$ for $$x\in\mathbb{R}$$
+$$g:\mathbb{R} \mapsto \mathbb{R}
+g(x) = \frac{1}{1+e^{-x}}$$ for $$x\in\mathbb{R}$$
 ![sigmoid.png](https://www.dropbox.com/scl/fi/t1glpp8jo31eazk013gqe/sigmoid.png?rlkey=vbw7lg30gohq2arjyokqpp9d5&dl=0&raw=1)
 ```
 def sigmoid(self, z):
