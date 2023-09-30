@@ -1,14 +1,15 @@
-# LogisticRegression
-
 #### Logistic function(sigmoid function)
 - $$g:$$$$\mathbb{R} \mapsto \mathbb{R}$$
 - $$g(x) = \frac{1}{1+e^{-x}}$$ for $$x\in\mathbb{R}$$
-![sigmoid](https://github.com/ImJaeSung/LogisticRegression/assets/113405066/deddf389-369d-4434-b435-bca5ed0cbfd0)
+![sigmoid.png](https://www.dropbox.com/scl/fi/t1glpp8jo31eazk013gqe/sigmoid.png?rlkey=vbw7lg30gohq2arjyokqpp9d5&dl=0&raw=1)
+```
+def sigmoid(self, z):
+    return 1/(1 + np.exp(-z))
+```
 
 #### Log loss
 - $$L(y, \hat{y})=-ylog(\hat{y})-(1-y)log(1-\hat{y})$$
-![log_loss](https://github.com/ImJaeSung/LogisticRegression/assets/113405066/4c92536c-6dfa-4ef8-9eeb-d466fdc82ba5)
-
+![log_loss.png](https://www.dropbox.com/scl/fi/wt2kegsxe5ysjk22qy4i6/log_loss.png?rlkey=o9nunk1fckhbdxb12nlt80mg1&dl=0&raw=1)
 
 #### Loss function
 - $$\mathbf{y} = (y_{1}, y_{2}, \cdots,y_{m})$$ : true value (0 or 1)
@@ -46,9 +47,13 @@ g(\mathbf{x_{3}}\mathbf{w}+b) \\
 g(\mathbf{x_{m}}\mathbf{w}+b)\\
 \end{bmatrix}$$
 - $$J(\mathbf{w}, b) \overset{\underset{\mathrm{def}}{}}{=}C(\mathbf{y}, \mathbf{\hat{y}}|\mathbf{X}, \mathbf{w}, b)=\frac{1}{m}\sum_{i=1}^{m}L(y_{i},\frac{1}{1+e^{-(\mathbf{x_{i}}\mathbf{w}+b)}}) = \frac{1}{m}\sum_{i=1}^{m}[-y_{i}log(\frac{1}{1+e^{-(\mathbf{x_{i}}\mathbf{w}+b)}})-(1-y_{i})log(1-\frac{1}{1+e^{-(\mathbf{x_{i}}\mathbf{w}+b)}})]$$
-
-
-#### Graident Descent
+```
+def cross_entropy_loss(self, y, y_hat):
+    delta = 1e-7
+    n = len(y)
+    return np.sum(-(y*np.log(y_hat + delta) + (1 - y)*np.log(1 - y_hat + delta)))/n
+```
+#### Gradient Descent
 - $$w_{j}\overset{\underset{\mathrm{def}}{}}{=} w_{j}-\alpha\frac{\partial J(\mathbf{w}, b)}{\partial w_{j}}$$ , for j = 1,2,$$\cdots$$,n
 - $$b\overset{\underset{\mathrm{def}}{}}{=} b-\alpha\frac{\partial J(\mathbf{w}, b)}{\partial b}$$
 ##### weight
@@ -63,4 +68,3 @@ g(\mathbf{x_{m}}\mathbf{w}+b)\\
 - $$\frac{\partial z}{\partial b} = 1$$
 - $$\frac{\partial L}{\partial b} =-(y\frac{1}{\hat{y}}-(1-y)\frac{1}{(1-\hat{y})})\hat{y}(1-\hat{y})1 =-(\hat{y}-y)1$$
 - $$b\overset{\underset{\mathrm{def}}{}}{=} b+\alpha(y-\hat{y})1$$
-```
