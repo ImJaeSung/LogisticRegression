@@ -1,4 +1,4 @@
-# Repository for LogisticRegression implement using NumPy
+# Repo for LogisticRegression implement using NumPy
 
 ## Logistic function(sigmoid function)
 $g:\mathbb{R} \mapsto \mathbb{R}$
