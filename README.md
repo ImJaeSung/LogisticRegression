@@ -61,3 +61,34 @@ $\frac{\partial z}{\partial b} = 1$
 $\frac{\partial L}{\partial b} =-(y\frac{1}{\hat{y}}-(1-y)\frac{1}{(1-\hat{y})})\hat{y}(1-\hat{y})1 =-(\hat{y}-y)1$
 
 $$b\overset{\underset{\mathrm{def}}{}}{=} b+\alpha(y-\hat{y})1$$
+
+
+```
+def gradient(self, x, y, y_hat):
+    n = len(y)
+    grad_w = - np.dot(x.transpose(), y-y_hat)/n
+    grad_b = - (y-y_hat)/n
+    return grad_w, grad_b
+```
+```
+def fit(self, x, y):
+
+    self.w = np.zeros(x.shape[1])
+    self.b = np.zeros(x.shape[0])
+    self.losses = []
+
+    for epoch in range(self.epochs):
+        z = np.dot(x, self.w) + self.b
+        y_hat = self.sigmoid(z)
+            
+        grad_w, grad_b = self.gradient(x, y, y_hat)
+        self.w -= self.lr * grad_w
+        self.b -= self.lr * grad_b
+        z = np.dot(x, self.w) + self.b
+        y_hat = self.sigmoid(z)
+
+        loss = self.cross_entropy_loss(y, y_hat)
+        self.losses.append(loss)
+        if epoch % 1000 == 0:
+            print(f'loss: {loss} \t
+```
