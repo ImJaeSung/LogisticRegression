@@ -36,7 +36,7 @@ x_{3,1} & x_{3,2} & \cdots & x_{3,n} \\
 x_{m,1} & x_{m,2} & \cdots & x_{m,n} \\
 \end{bmatrix}$$ 
 
-- $$\mathbf{y} = \begin{bmatrix}
+$$\mathbf{y} = \begin{bmatrix}
 y_{1}\\ 
 y_{2} \\
 y_{3} \\
