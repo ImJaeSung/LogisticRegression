@@ -1,5 +1,5 @@
 ## Logistic function(sigmoid function)
-$$g:\mathbb{R} \mapsto \mathbb{R}$$
+$g:\mathbb{R} \mapsto \mathbb{R}$
 
 $$g(x) = \frac{1}{1+e^{-x}}$$ for $$x\in\mathbb{R}$$
 ```
