@@ -22,7 +22,7 @@ $$C(\mathbf{y}, \mathbf{\hat{y}}) = \frac{1}{m}\sum_{i=1}^{m}L(y_{i}, \hat{y}_{i
 
 $$\hat{y} = g(\mathbf{x}\mathbf{w}+b) = \frac{1}{1+e^-(\mathbf{x}\mathbf{w}+b)}$$
 
-\mathbf{X} = \begin{bmatrix} 
+$\mathbf{X} = \begin{bmatrix} 
 \mathbf{x_{1}} \\ 
 \mathbf{x_{2}} \\
 \mathbf{x_{3}} \\
@@ -34,7 +34,7 @@ x_{2,1} & x_{2,2} & \cdots & x_{2,n} \\
 x_{3,1} & x_{3,2} & \cdots & x_{3,n} \\
 \vdots & \vdots & \ddots & \vdots\\
 x_{m,1} & x_{m,2} & \cdots & x_{m,n} \\
-\end{bmatrix}
+\end{bmatrix}$
 
 $$\mathbf{y} = \begin{bmatrix}
 y_{1}\\ 
