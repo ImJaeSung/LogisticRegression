@@ -7,20 +7,16 @@ def sigmoid(self, z):
     return 1/(1 + np.exp(-z))
 ```
 
-## Log loss
-$$L(y, \hat{y})=-ylog(\hat{y})-(1-y)log(1-\hat{y})$$
-
-
 ## Loss function
-$$\mathbf{y} = (y_{1}, y_{2}, \cdots,y_{m})$$ : true value (0 or 1)
+- $\mathbf{y} = (y_{1}, y_{2}, \cdots,y_{m})$ : true value (0 or 1)
 
-$$\mathbf{\hat{y}} = (\hat{y_{1}}, \hat{y_{2}}, \cdots, \hat{y_{m}})$$ : predictions(probabilities)
+- $\mathbf{\hat{y}} = (\hat{y_{1}}, \hat{y_{2}}, \cdots, \hat{y_{m}})$ : predictions(probabilities)
 
 $$C(\mathbf{y}, \mathbf{\hat{y}}) = \frac{1}{m}\sum_{i=1}^{m}L(y_{i}, \hat{y}_{i})$$
 
-$$\mathbf{x}_{i} = (x_{i, 1},x_{i, 2}, \cdots, x_{i, n})$$
+- $\mathbf{{x}_{i}} = (x_{i, 1},x_{i, 2}, \cdots, x_{i, n})$
 
-$$\mathbf{w} = (w_{1},w_{2}, \cdots, w_{n})$$ : weight parameters
+- $\mathbf{w} = (w_{1},w_{2}, \cdots, w_{n})$ : weight parameters
 
 - b: bias parameter
 
