@@ -22,37 +22,7 @@ $$C(\mathbf{y}, \mathbf{\hat{y}}) = \frac{1}{m}\sum_{i=1}^{m}L(y_{i}, \hat{y}_{i
 
 $$\hat{y} = g(\mathbf{x}\mathbf{w}+b) = \frac{1}{1+e^-(\mathbf{x}\mathbf{w}+b)}$$
 
-$\mathbf{X} = \begin{bmatrix} 
-\mathbf{x_{1}} \\ 
-\mathbf{x_{2}} \\
-\mathbf{x_{3}} \\
-\vdots\\
-\mathbf{x_{m}} \\
-\end{bmatrix} = \begin{bmatrix}
-x_{1,1} & x_{1,2} & \cdots & x_{1,n} \\
-x_{2,1} & x_{2,2} & \cdots & x_{2,n} \\
-x_{3,1} & x_{3,2} & \cdots & x_{3,n} \\
-\vdots & \vdots & \ddots & \vdots\\
-x_{m,1} & x_{m,2} & \cdots & x_{m,n} \\
-\end{bmatrix}$
-
-$$\mathbf{y} = \begin{bmatrix}
-y_{1}\\ 
-y_{2} \\
-y_{3} \\
-\vdots\\
-y_{m} \\
-\end{bmatrix}$$
-
-$$\hat{\mathbf{y}} = \begin{bmatrix}
-g(\mathbf{x_{1}}\mathbf{w}+b)\\ 
-g(\mathbf{x_{2}}\mathbf{w}+b) \\
-g(\mathbf{x_{3}}\mathbf{w}+b) \\
-\vdots\\
-g(\mathbf{x_{m}}\mathbf{w}+b)\\
-\end{bmatrix}$$
-
-$J(\mathbf{w}, b) \overset{\underset{\mathrm{def}}{}}{=}C(\mathbf{y}, \mathbf{\hat{y}}|\mathbf{X}, \mathbf{w}, b) = \frac{1}{m}\sum_{i=1}^{m}L(y_{i},\frac{1}{1+e^{-(\mathbf{x_{i}}\mathbf{w}+b)}}) = \frac{1}{m}\sum_{i=1}^{m}[-y_{i}log(\frac{1}{1+e^{-(\mathbf{x_{i}}\mathbf{w}+b)}})-(1-y_{i})log(1-\frac{1}{1+e^{-(\mathbf{x_{i}}\mathbf{w}+b)}})]$$
+$$ \begin{aligned} J(\mathbf{w}, b) \overset{\underset{\mathrm{def}}{}}{=}C(\mathbf{y}, \mathbf{\hat{y}}|\mathbf{X}, \mathbf{w}, b)&=\frac{1}{m}\sum_{i=1}^{m}L(y_{i},\frac{1}{1+e^{-(\mathbf{x_{i}}\mathbf{w}+b)}}) & \frac{1}{m}\sum_{i=1}^{m}[-y_{i}log(\frac{1}{1+e^{-(\mathbf{x_{i}}\mathbf{w}+b)}})-(1-y_{i})log(1-\frac{1}{1+e^{-(\mathbf{x_{i}}\mathbf{w}+b)}})]\end{aligned}$$
 
 ```
 def cross_entropy_loss(self, y, y_hat):
